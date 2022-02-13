@@ -1,7 +1,7 @@
 # dC-install
 
 ## W przypadku użycia w celu instalcji OTP:
-1. sce-load bash
+1. $ sce-load bash
 2. $ dC-install OTP /mnt/sr0 /dev/sda
 
 ## W przypadku użycia w celu instalacji dCore
