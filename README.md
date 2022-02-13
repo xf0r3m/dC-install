@@ -12,6 +12,7 @@
 * fdisk
 * e2fsprogs
 * extlinux
+
 **Wszystkie te rozszerzenia muszą być załadowane w momencie uruchomienia
 polecenia poza rozszerzeniem git**
 
