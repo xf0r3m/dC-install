@@ -8,7 +8,7 @@ target_device=$3
 target_part="${target_device}1"
 
 #Instalacja sfdisk
-sce-import fdisk
+#sce-import fdisk
 sce-load fdisk
 	
 #Partycjonowanie dysku
@@ -33,7 +33,7 @@ sudo mkdir -p ${mount_point}/boot/extlinux
 sudo cp -p /mnt/$(basename $install_device)/boot/* ${mount_point}/boot/
 
 #Instalacja e2fsprogs
-sce-import e2fsprogs
+#sce-import e2fsprogs
 sce-load e2fsprogs
 
 #Ustawienie etykiety dla partycji
@@ -44,7 +44,7 @@ else
 fi
 
 #Instalacja extlinux
-sce-import extlinux
+#sce-import extlinux
 sce-load extlinux
 
 #Instalacja plików extlinux na dysku
@@ -71,10 +71,10 @@ EOF
 fi
 sudo cp $HOME/extlinux.conf ${mount_point}/boot/extlinux
 
-/usr/bin/tce-setdrive
+#/usr/bin/tce-setdrive
 
 if [ $dCtype = "OTP" ]; then
-	sudo cp -rvv /mnt/$(basename ${install_device})/cde/* ${mount_point}/tce
+	sudo cp -prvv /mnt/$(basename ${install_device})/tce ${mount_point}
 fi
 
 echo "$dCtype został poprawnie zainstalowany, teraz można uruchomić komputer ponownie.";
